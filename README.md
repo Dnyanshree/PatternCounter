@@ -6,7 +6,7 @@
 - Counts occurrences of each unique number in the document
 - Counts occurrences of each unique phrase of three consecutive words in the document
  
-<br/>It then prints each word, number or phrase and its count on standard output separated by a comma in a new line. For the purpose of this exercise, use space character as the de-limiter for words. String matching should be case sensitive. Here are some examples of <br/>Contents of Input document (Input.txt): "1000 a big surprise 2000 hello is a big surprise 1000" 
+It then prints each word, number or phrase and its count on standard output separated by a comma in a new line. For the purpose of this exercise, use space character as the de-limiter for words. String matching should be case sensitive. Here are some examples of <br/>Contents of Input document (Input.txt): "1000 a big surprise 2000 hello is a big surprise 1000" 
 <br/>PatternCounter Input.txt 1
 <br/>a, 2
 <br/>big, 2
@@ -26,7 +26,6 @@
 <br/>is a big, 1
 <br/>big surprise 1000, 1 
 <br/>The output could be empty if there are less than 3 words in the document.
-
 **Tools/Technologies Used:**
 <br/> Java (version 8) – All the code is written Using Java
 <br/> Maven (version 3.1) – Used Maven to manage build dependencies. All the dependencies are inside pom.xml file
@@ -48,11 +47,12 @@
 - Input.txt
 - MultipleLines.txt
 - InputNoPhrases.txt 
-<br/>
+<br/><br/>
 **Design Pattern:**
 <br/> I used MVC (Model-View-Controller) pattern to make this project, focusing on segregation of classes based on what they are doing. All the classes are maintained in different packages.
 <br/>Firstly, I created CountService.java Interface which define the required 3 methods to be implemented for PatternCounter Project. CountServiceImpl.java is a class that implements the methods defined in CountService.java interface.
 <br/>Next, Display.java class is responsible for all the methods concerning displaying the output. This comes under view part of the MVC pattern.
 <br/>Data from text file is manipulated inside InputData.java file that comes under model part of MVC. Here there was no need on putting any data into database so I used List and HashMap data structures for the most part.
 CountController.java is responsible for handling the flow of the project, it calls necessary methods/classes. It is the controller part of MVC pattern.
-<br/>**Source code contains all Java and Test(JUnit) files.**
+<br/>
+**Source code contains all Java and Test(JUnit) files.**
