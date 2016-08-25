@@ -2,7 +2,6 @@
 
 **Problem Statement:**
 <br/>Write a program (source and unit tests) "PatternCounter" that reads an input document from a file (path provided as first command line argument) and calculates the number of occurrences of one of the 3 patterns based on the second command line argument:
-<br/>
 - Counts occurrences of each unique word in the document
 - Counts occurrences of each unique number in the document
 - Counts occurrences of each unique phrase of three consecutive words in the document
@@ -33,23 +32,22 @@
 <br/> Maven (version 3.1) – Used Maven to manage build dependencies. All the dependencies are inside pom.xml file
 <br/> Spring Using Annotations (version 4.3.1) – Used for Dependency Injection and Loose Coupling
 <br/> Junit (version 4.12), Mockito (version 1.10.19) Testing Framework – For testing purposes
-<br/>
+<br/><br/>
 **Build Instructions (Not Needed for JAR FileExecution):**
 <br/> mvn clean compile assembly:single
 <br/> mvn package
-<br/>
+<br/><br/>
 **Execution Instructions:**
 - Clone the repository
 - Goto folder where JAR File is present Using following command:
 <br/>cd <LocationWhereJARFileIsPresent>
 - Run the following command:
 <br/>java -cp PatternCounter-0.0.1-SNAPSHOT-jar-with-dependencies.jar com.dnyanshree.PatternCounter.PatternCounter Input 1
-<br/>
+<br/><br/>
 **Available text files inside JAR:**
 - Input.txt
 - MultipleLines.txt
 - InputNoPhrases.txt 
-                      
 <br/>
 **Design Pattern:**
 <br/> I used MVC (Model-View-Controller) pattern to make this project, focusing on segregation of classes based on what they are doing. All the classes are maintained in different packages.
@@ -57,4 +55,4 @@
 <br/>Next, Display.java class is responsible for all the methods concerning displaying the output. This comes under view part of the MVC pattern.
 <br/>Data from text file is manipulated inside InputData.java file that comes under model part of MVC. Here there was no need on putting any data into database so I used List and HashMap data structures for the most part.
 CountController.java is responsible for handling the flow of the project, it calls necessary methods/classes. It is the controller part of MVC pattern.
-<br/> Source code contains all Java and Test(JUnit) files.
+<br/>**Source code contains all Java and Test(JUnit) files.**
